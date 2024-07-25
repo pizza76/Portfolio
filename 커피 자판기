@@ -1,0 +1,122 @@
+# 커피 자판기 프로토 타입 V0.0.1
+
+# 가격 변경
+americano = 1500
+cafelatte = 2300
+hotchoco = 2000
+
+# 무한대로 반복 (중지키 : 1234)
+while True:
+    
+    # 메뉴 표시
+    print(f"--커피 자판기--\n   --메뉴--\n1 : 아메리카노  {americano}원\n2 : 까페라떼  {cafelatte}원\n3 : 핫초코  {hotchoco}원")
+    
+    # 메뉴 입력
+    selection = int(input("어떤 메뉴를 원하시나요? (번호를 입력해주세요.)"))
+
+    # 아메리카노
+    if selection == 1:
+    
+        money = 0
+    
+        money = int(input(f"{americano}원 입니다, 돈을 투입해 주세요!"))
+    
+        if money == americano:
+            print("커피가 나왔습니다.")
+    
+        elif money > americano:
+            print(f"{money}원 받았습니다, 거스름돈은{money - americano}원 입니다")
+            print("거스름돈을 받으십시오.")
+            print("커피가 나왔습니다.")
+    
+        elif money < americano:
+        
+            extra_m = 0
+        
+            extra_m = int(input(f"투입한 금액이 부족합니다. {americano - money}원을 더 투입해주시기 바랍니다."))
+        
+            if extra_m == (americano - money):
+                print("커피가 나왔습니다.")
+        
+            elif extra_m > (americano - money):
+                print(f"{extra_m}원 받았습니다, 거스름돈은{extra_m - (americano - money)}원 입니다")
+                print("커피가 나왔습니다.")
+        
+            elif extra_m < (americano - money):
+                print(f"주문이 취소되었습니다, 반환되는 금액은 {extra_m + money}원 입니다.")
+        
+        else:
+            print("다시 입력해 주세요.")
+    
+    # 카페라떼
+    if selection == 2:
+    
+        money = 0
+
+        money = int(input(f"{cafelatte}원 입니다, 돈을 투입해 주세요!"))
+    
+        if money == cafelatte:
+            print("커피가 나왔습니다.")
+    
+        elif money > cafelatte:
+            print(f"{money}원 받았습니다, 거스름돈은{money - cafelatte}원 입니다")
+            print("거스름돈을 받으십시오.")
+            print("커피가 나왔습니다.")
+    
+        elif money < cafelatte:
+    
+            extra_m = 0
+        
+            extra_m = int(input(f"투입한 금액이 부족합니다. {cafelatte - money}원을 더 투입해주시기 바랍니다."))
+        
+            if extra_m == (cafelatte - money):
+                print("커피가 나왔습니다.")
+        
+            elif extra_m > (cafelatte - money):
+                print(f"{extra_m}원 받았습니다, 거스름돈은{extra_m - (cafelatte - money)}원 입니다")
+                print("커피가 나왔습니다.")
+        
+            elif extra_m < (cafelatte - money):
+                print(f"주문이 취소되었습니다, 반환되는 금액은 {extra_m + money}원 입니다.")
+        
+        else:
+            print("다시 입력해 주세요.")
+    
+
+    # 핫초코
+    if selection == 3:
+    
+        money = int(input(f"{hotchoco}원 입니다, 돈을 투입해 주세요!"))
+    
+        if money == hotchoco:
+            print("음료가 나왔습니다.")
+    
+        elif money > hotchoco:
+            print(f"{money}원 받았습니다, 거스름돈은{money - hotchoco}원 입니다")
+            print("거스름돈을 받으십시오.")
+            print("음료가 나왔습니다.")
+    
+        elif money < hotchoco:
+        
+            extra_m = 0
+        
+            extra_m = int(input(f"투입한 금액이 부족합니다. {hotchoco - money}원을 더 투입해주시기 바랍니다."))
+        
+            if extra_m == (hotchoco - money):
+                print("음료가 나왔습니다.")
+        
+            elif extra_m > (hotchoco - money):
+                print(f"{extra_m}원 받았습니다, 거스름돈은{extra_m - (hotchoco - money)}원 입니다")
+                print("음료가 나왔습니다.")
+        
+            elif extra_m < (hotchoco - money):
+                print(f"주문이 취소되었습니다, 반환되는 금액은 {extra_m + money}원 입니다.")
+        
+        else:
+            print("다시 입력해 주세요.")       
+    
+    if selection == 1234:
+        print("프로그램을 종료합니다.")
+        break
+     
+
